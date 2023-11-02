@@ -10,11 +10,23 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var heightSlider: UISlider!
+    @IBOutlet weak var weightSlider: UISlider!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
 
-
+    
+    @IBAction func changeHeightValue(_ sender: UISlider) {
+        String(format: "%.2f",heightSlider.value)
+    }
+    
+    
+    @IBAction func changeWeightValue(_ sender: UISlider) {
+        String(format: "%.2f",weightSlider.value)
+    }
+    
 }
 
